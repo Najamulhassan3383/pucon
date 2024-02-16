@@ -5,6 +5,7 @@ import AboutUs from "./screens/AboutUs";
 import LoginPage from "./screens/LoginPage";
 import SignUpPage from "./screens/SignUpPage";
 import Dashboard from "./screens/Dashboard";
+import AdminRoute from "./components/AdminRoute";
 
 export default function App() {
   return (
@@ -16,7 +17,9 @@ export default function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/LoginPage" element={<LoginPage />} />
           <Route path="/SignUpPage" element={<SignUpPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="" element={<AdminRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
         </Routes>
       </Router>
     </>
